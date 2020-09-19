@@ -18,5 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/harshuj', function () {
-  return ['name' => 'Harshuj', 'role' => 'Full Stack Software Developer', 'Location' => 'Bhopal'];
+  $data = [
+    'name' => 'Harshuj',
+    'role' => 'Full Stack Software Developer',
+    'location' => 'Bhopal'
+  ];
+    
+  return view('harshuj' , $data);
 });
