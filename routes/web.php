@@ -25,5 +25,6 @@ Route::get('/harshuj', function () {
     'experience' => 5
   ];
 
+  $name = request('by');
   return view('harshuj' , $data);
 });
