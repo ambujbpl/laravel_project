@@ -28,3 +28,8 @@ Route::get('/harshuj', function () {
   $name = request('by');
   return view('harshuj' , $data);
 });
+
+Route::get('/blog/{id}', function ($id) {
+  echo '$id '.$id;
+  return view('welcome',['$id' => $id]);
+});
