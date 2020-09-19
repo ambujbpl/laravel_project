@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+@extends('layout.layout')
+@section('containt')
+<div class="container">
   Wellcome to {{ $name }}<br>
   my role is : {{ $role }}<br>
   and current location is : {{ $location }}<br>
@@ -29,6 +24,8 @@
 
   @for($i=0; $i < 10; $i++)
     <p>count is :- {{ $i }}</p><br>
-  @endfor  
-</body>
-</html>
+  @endfor
+
+  <img src='./images/image.png' alt="test image">
+</div>
+@endsection
