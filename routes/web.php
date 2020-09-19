@@ -21,8 +21,9 @@ Route::get('/harshuj', function () {
   $data = [
     'name' => 'Harshuj',
     'role' => 'Full Stack Software Developer',
-    'location' => 'Bhopal'
+    'location' => 'Indore',
+    'experience' => 5
   ];
-    
+
   return view('harshuj' , $data);
 });
