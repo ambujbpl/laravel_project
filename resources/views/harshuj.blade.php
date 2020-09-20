@@ -1,5 +1,6 @@
-@extends('layout.layout')
-@section('containt')
+@extends('layouts.layout')
+
+@section('content')
 <div class="container">
   Wellcome to {{ $name }}<br>
   my role is : {{ $role }}<br>

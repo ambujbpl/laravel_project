@@ -18,12 +18,14 @@ use App\Http\Controllers\PizzaController;
 
 */
 
-Route::get('/', [PizzaController::class, 'index']); //Route::get('/', 'PizzaController@index')-> [old laravel version<8]
+Route::get('/', [PizzaController::class, 'welcome']); //Route::get('/', 'PizzaController@index')-> [old laravel version<8]
 
 Route::get('/harshuj', [PizzaController::class, 'harshuj']); //Route::get('/harshuj', 'PizzaController@harshuj')-> [old laravel version<8]
 
-Route::get('/pizzas', [PizzaController::class, 'pizzas']);
-Route::get('/pizza/{id}', [PizzaController::class, 'show']);
+// pizza routes
+Route::get('/pizzas', [PizzaController::class, 'index']);
+Route::get('/pizzas/create', [PizzaController::class, 'create']);
+Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
 
 // Route::get('/blog/{id}', function ($id) {
 //   echo '$id '.$id;

@@ -7,17 +7,17 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <link href='./css/style.css' rel="stylesheet">
+        <link href="/css/main.css" rel="stylesheet">
     </head>
-    <body class="antialiased">
+    <body>
 
-      @yield('containt')
-      
+      @yield('content')
+
       <footer>
-        Copyright 2020 Harshuj
-      <footer>
+        <p>Copyright 2020 Pizza House</p>
+      </footer>
     </body>
-</html>    
+</html>

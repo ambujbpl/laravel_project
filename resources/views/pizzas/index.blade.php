@@ -1,6 +1,6 @@
-@extends('layout.layout')
+@extends('layouts.layout')
 
-@section('containt')
+@section('content')
 <div class="flex-center position-ref full-height">
     <div class="content">
         <div class="title m-b-md">
@@ -9,7 +9,7 @@
 
         @foreach($pizzas as $pizza)
           <div>
-            {{ $pizza['name'] }} - {{ $pizza['type'] }} - {{ $pizza['base'] }}
+            {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }}
           </div>
         @endforeach
 
