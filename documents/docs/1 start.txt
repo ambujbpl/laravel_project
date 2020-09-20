@@ -34,3 +34,9 @@ Create a Pizza Model :- php artisan make:model Pizza
 
 -----------------------------------------------------------
 
+
+Work with scss
+need nodejs for dependency injection related to webpack and scss compiler with laravel run :- npm install
+
+npm run dev { for development scss parser}
+npm run watch { will check all changes and compile sacc to css }
