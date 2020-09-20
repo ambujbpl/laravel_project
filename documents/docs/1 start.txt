@@ -52,5 +52,5 @@ Please run "npm install && npm run dev" to compile your fresh scaffolding.
 to check all available route :- php artisan route:list
 ------------------------------------------------------------------------------
 
-Create New Model Controller using single command 
+Create New Model andd Controller using single command 
 php artisan make:model Kabab -mc 
