@@ -1,3 +1,13 @@
 start the project:-  php artisan serve
 
 aplication should open port 8000 :- http://127.0.0.1:8000/
+
+create new controller :- php artisan make:controller PizzaController
+use App\Http\Controllers\UserController;
+
+
+Listing All Available Commands :- php artisan list
+
+Viewing The Help Screen For A Command :- php artisan help migrate
+
+Check Laravel Version :- php artisan --version

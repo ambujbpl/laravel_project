@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PizzaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,23 +11,13 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+  In Laravel 8+, they've changed the way how you get to the Controllers from the Routes. Here is the correct syntax: 
+
 */
 
-Route::get('/', function () {
-  return view('welcome');
-});
+Route::get('/', [PizzaController::class, 'index']); //Route::get('/', 'PizzaController@index')-> [old laravel version<8]
 
-Route::get('/harshuj', function () {
-  $data = [
-    'name' => 'Harshuj',
-    'role' => 'Full Stack Software Developer',
-    'location' => 'Indore',
-    'experience' => 5
-  ];
-
-  $name = request('by');
-  return view('harshuj' , $data);
-});
+Route::get('/harshuj', [PizzaController::class, 'harshuj']); //Route::get('/harshuj', 'PizzaController@harshuj')-> [old laravel version<8]
 
 Route::get('/blog/{id}', function ($id) {
   echo '$id '.$id;
