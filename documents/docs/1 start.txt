@@ -40,3 +40,11 @@ need nodejs for dependency injection related to webpack and scss compiler with l
 
 npm run dev { for development scss parser}
 npm run watch { will check all changes and compile sacc to css }
+
+------------------------------------------------------------------
+
+Add laravel auth syatem using laravel/ui plugin
+
+install it using :- composer require laravel/ui
+install authentication Ui :- php artisan ui vue --auth
+Please run "npm install && npm run dev" to compile your fresh scaffolding.
