@@ -48,3 +48,6 @@ Add laravel auth syatem using laravel/ui plugin
 install it using :- composer require laravel/ui
 install authentication Ui :- php artisan ui vue --auth
 Please run "npm install && npm run dev" to compile your fresh scaffolding.
+
+to check all available route :- php artisan route:list
+------------------------------------------------------------------------------

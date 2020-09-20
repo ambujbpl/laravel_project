@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Pizza;
 class PizzaController extends Controller
 {
+  // public function __construct(){
+  //   $this->middleware('auth');
+  // }
   public function harshuj() {
     $data = [
       'name' => 'Harshuj',

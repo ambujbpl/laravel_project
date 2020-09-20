@@ -27,15 +27,18 @@ Route::get('/', function () {
 Route::get('/harshuj', [PizzaController::class, 'harshuj']); //Route::get('/harshuj', 'PizzaController@harshuj')-> [old laravel version<8]
 
 // pizza routes
-Route::get('/pizzas', [PizzaController::class, 'index']);
+Route::get('/pizzas', [PizzaController::class, 'index'])->middleware('auth');
 Route::get('/pizzas/create', [PizzaController::class, 'create']);
-Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
+Route::get('/pizzas/{id}', [PizzaController::class, 'show'])->middleware('auth');
 Route::post('/pizzas', [PizzaController::class, 'store']);
-Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy']);
+Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy'])->middleware('auth');
 // Route::get('/blog/{id}', function ($id) {
 //   echo '$id '.$id;
 //   return view('welcome',['$id' => $id]);
 // });
-Auth::routes();
+// Auth::routes();
+Auth::routes([
+  'register' => false,
+]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
