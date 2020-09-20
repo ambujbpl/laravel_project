@@ -27,11 +27,11 @@ Route::get('/', function () {
 Route::get('/harshuj', [PizzaController::class, 'harshuj']); //Route::get('/harshuj', 'PizzaController@harshuj')-> [old laravel version<8]
 
 // pizza routes
-Route::get('/pizzas', [PizzaController::class, 'index'])->middleware('auth');
-Route::get('/pizzas/create', [PizzaController::class, 'create']);
-Route::get('/pizzas/{id}', [PizzaController::class, 'show'])->middleware('auth');
-Route::post('/pizzas', [PizzaController::class, 'store']);
-Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy'])->middleware('auth');
+Route::get('/pizzas', [PizzaController::class, 'index'])->name('pizzas.index')->middleware('auth');
+Route::get('/pizzas/create', [PizzaController::class, 'create'])->name('pizzas.create');
+Route::get('/pizzas/{id}', [PizzaController::class, 'show'])->name('pizzas.show')->middleware('auth');
+Route::post('/pizzas', [PizzaController::class, 'store'])->name('pizzas.store');
+Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy'])->name('pizzas.destroy')->middleware('auth');
 // Route::get('/blog/{id}', function ($id) {
 //   echo '$id '.$id;
 //   return view('welcome',['$id' => $id]);
