@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+// Add controller
 use App\Http\Controllers\PizzaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +22,10 @@ Route::get('/', [PizzaController::class, 'index']); //Route::get('/', 'PizzaCont
 
 Route::get('/harshuj', [PizzaController::class, 'harshuj']); //Route::get('/harshuj', 'PizzaController@harshuj')-> [old laravel version<8]
 
-Route::get('/blog/{id}', function ($id) {
-  echo '$id '.$id;
-  return view('welcome',['$id' => $id]);
-});
+Route::get('/pizzas', [PizzaController::class, 'pizzas']);
+Route::get('/pizza/{id}', [PizzaController::class, 'show']);
+
+// Route::get('/blog/{id}', function ($id) {
+//   echo '$id '.$id;
+//   return view('welcome',['$id' => $id]);
+// });

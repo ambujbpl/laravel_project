@@ -1,13 +1,36 @@
 start the project:-  php artisan serve
-
 aplication should open port 8000 :- http://127.0.0.1:8000/
+
+-----------------------------------------------------------
 
 create new controller :- php artisan make:controller PizzaController
 use App\Http\Controllers\UserController;
 
+-----------------------------------------------------------
 
 Listing All Available Commands :- php artisan list
 
 Viewing The Help Screen For A Command :- php artisan help migrate
 
 Check Laravel Version :- php artisan --version
+
+-----------------------------------------------------------
+database connection set on .env file 
+
+add new migration :- php artisan make:migration create_pizzas_table
+
+run migration : php artisan migrate
+run migration : php artisan migrate:fresh (restart frsh migration on db)
+migrate:fresh        Drop all tables and re-run all migrations
+migrate:install      Create the migration repository
+migrate:refresh      Reset and re-run all migrations
+migrate:reset        Rollback all database migrations
+migrate:rollback     Rollback the last database migration
+migrate:status       Show the status of each migration
+
+-----------------------------------------------------------
+
+Create a Pizza Model :- php artisan make:model Pizza
+
+-----------------------------------------------------------
+
