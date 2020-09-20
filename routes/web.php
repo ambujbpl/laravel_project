@@ -18,7 +18,11 @@ use App\Http\Controllers\PizzaController;
 
 */
 
-Route::get('/', [PizzaController::class, 'welcome']); //Route::get('/', 'PizzaController@index')-> [old laravel version<8]
+Route::get('/', function () {
+  return view('welcome');
+});
+
+// Route::get('/', [PizzaController::class, 'welcome']); //Route::get('/', 'PizzaController@index')-> [old laravel version<8]
 
 Route::get('/harshuj', [PizzaController::class, 'harshuj']); //Route::get('/harshuj', 'PizzaController@harshuj')-> [old laravel version<8]
 
