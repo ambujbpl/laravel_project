@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kabab extends Model
 {
-    use HasFactory;
+  use HasFactory;
+  protected $casts = [
+    'ingredients' => 'array',
+  ];
 }

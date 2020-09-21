@@ -15,6 +15,9 @@ class CreateKababsTable extends Migration
     {
         Schema::create('kababs', function (Blueprint $table) {
             $table->id();
+            $table->string('type');
+            $table->string('name');
+            $table->json('ingredients');
             $table->timestamps();
         });
     }

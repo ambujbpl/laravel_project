@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 // Add controller
 use App\Http\Controllers\PizzaController;
+// Add controller
+use App\Http\Controllers\KababController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +24,6 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-// Route::get('/', [PizzaController::class, 'welcome']); //Route::get('/', 'PizzaController@index')-> [old laravel version<8]
-
-Route::get('/harshuj', [PizzaController::class, 'harshuj']); //Route::get('/harshuj', 'PizzaController@harshuj')-> [old laravel version<8]
-
 // pizza routes
 Route::get('/pizzas', [PizzaController::class, 'index'])->name('pizzas.index')->middleware('auth');
 Route::get('/pizzas/create', [PizzaController::class, 'create'])->name('pizzas.create');
@@ -37,8 +35,20 @@ Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy'])->name('pizzas
 //   return view('welcome',['$id' => $id]);
 // });
 // Auth::routes();
+
+
+// Route::get('/harshuj', [KababController::class, 'harshuj']->name('kabab.harshuj'));
+
+// // kabab routes
+Route::get('/kababs', [KababController::class, 'index'])->name('kababs.index')->middleware('auth');
+Route::get('/kababs/create', [KababController::class, 'create'])->name('kababs.create');
+Route::get('/kababs/{id}', [KababController::class, 'show'])->name('kababs.show')->middleware('auth');
+Route::post('/kababs', [KababController::class, 'store'])->name('kababs.store');
+Route::delete('/kababs/{id}', [KababController::class, 'destroy'])->name('kababs.destroy')->middleware('auth');
+
+
 Auth::routes([
-  'register' => false,
+  // 'register' => false,
 ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

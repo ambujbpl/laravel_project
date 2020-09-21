@@ -16,6 +16,7 @@
 
                     {{ __('You are logged in!') }}<br>
                     <p><a href="./pizzas">Show all pizzas!</a></p>
+                    <p><a href="./kababs">Show all kababs!</a></p>
                 </div>
             </div>
         </div>
