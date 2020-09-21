@@ -30,36 +30,35 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 ## Laravel Project Quick Setup Guide
 
 basic setup need is composer \
-install laravel globally :- composer global require laravel/installer \
+install laravel globally :- composer global require laravel/installer 
 
------------------------------------------------------------------------ \
+----------------------------------------------------------------------- 
 
 check laravel install globally :- laravel -v :- current installer -> Laravel Installer 4.0.4 \
-create new laravel projects:- laravel new YourProjectName \
+create new laravel projects:- laravel new YourProjectName 
 
----------------------------------------------------------------------------------------------- \
+---------------------------------------------------------------------------------------------- 
 
 start the project:-  php artisan serve \
-aplication should open port 8000 :- http://127.0.0.1:8000/   \
+aplication should open port 8000 :- http://127.0.0.1:8000/   
 
------------------------------------------------------------ \
+----------------------------------------------------------- 
 
 create new controller :- php artisan make:controller PizzaController \
-use App\Http\Controllers\UserController; \
+use App\Http\Controllers\UserController; 
 
------------------------------------------------------------ \
+----------------------------------------------------------- 
 
-Listing All Available Commands :- php artisan list \
+Listing All Available Commands :- php artisan list 
 
-Viewing The Help Screen For A Command :- php artisan help migrate \
+Viewing The Help Screen For A Command :- php artisan help migrate 
 
-Check Laravel Version :- php artisan --version \
+Check Laravel Version :- php artisan --version 
 
------------------------------------------------------------ \
+----------------------------------------------------------- 
+
 database connection set on .env file  \
-
 add new migration :- php artisan make:migration create_pizzas_table  \
-
 run migration : php artisan migrate  \
 run migration : php artisan migrate:fresh (restart frsh migration on db) \
 migrate:fresh        Drop all tables and re-run all migrations \
@@ -67,44 +66,41 @@ migrate:install      Create the migration repository \
 migrate:refresh      Reset and re-run all migrations \
 migrate:reset        Rollback all database migrations \
 migrate:rollback     Rollback the last database migration \
-migrate:status       Show the status of each migration \
+migrate:status       Show the status of each migration
 
------------------------------------------------------------ \
+-----------------------------------------------------------
 
-Create a Pizza Model :- php artisan make:model Pizza \
+Create a Pizza Model :- php artisan make:model Pizza
 
------------------------------------------------------------ \
-
+-----------------------------------------------------------
 
 Work with scss \
 need nodejs for dependency injection related to webpack and scss compiler with laravel run :- npm install \
-
 npm run dev { for development scss parser} \
-npm run watch { will check all changes and compile sacc to css } \
+npm run watch { will check all changes and compile sacc to css }
 
------------------------------------------------------------------- \
+------------------------------------------------------------------
 
 Add laravel auth syatem using laravel/ui plugin \
 
 install it using :- composer require laravel/ui \
 install authentication Ui :- php artisan ui vue --auth \
 Please run "npm install && npm run dev" to compile your fresh scaffolding. \
+to check all available route :- php artisan route:list
 
-to check all available route :- php artisan route:list \
-
------------------------------------------------------------------------------- \
+------------------------------------------------------------------------------
 
 Create New Model andd Controller using single command  \
-php artisan make:model Kabab -mc  \
+php artisan make:model Kabab -mc
 
------------------------------------------------------------- \
+------------------------------------------------------------
 
 Advance authentication using laravel jetstream \
 create a fresh project and configure :-  \
 composer require laravel/jetstream \
-php artisan jetstreem:install livewire \
+php artisan jetstreem:install livewire
 
---------------------------------------------------------------- \
+--------------------------------------------------------------- 
 
 Mail using google gmail:- \
 
@@ -115,12 +111,12 @@ MAIL_USERNAME=YourMail \
 MAIL_PASSWORD=YourPassword \
 MAIL_ENCRYPTION=ssl \
 MAIL_FROM_ADDRESS=ambuj@gmail.com \
-MAIL_FROM_NAME="${APP_NAME}" \
+MAIL_FROM_NAME="${APP_NAME}"
 
 MAIL_DRIVER=mail \
 MAIL_HOST=mail.gmail.com \
 MAIL_PORT=587 \
-MAIL_ENCRYPTION=tls \
+MAIL_ENCRYPTION=tls
 
 Mail using mailtrap go to mailtrap.io and create account fetch user_name secret and password secret \
 MAIL_MAILER=smtp \
@@ -130,6 +126,6 @@ MAIL_USERNAME=YourMailSecret \
 MAIL_PASSWORD=YourPasswordSecret \
 MAIL_ENCRYPTION=null \
 MAIL_FROM_ADDRESS=ambuj@gmail.com \
-MAIL_FROM_NAME="${APP_NAME}" \
+MAIL_FROM_NAME="${APP_NAME}" 
 
------------------------------------------------------------------------------------------------------ \
+----------------------------------------------------------------------------------------------------- 
