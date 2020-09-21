@@ -27,35 +27,109 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Laravel Project Quick Setup Guide
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+basic setup need is composer \
+install laravel globally :- composer global require laravel/installer \
 
-### Premium Partners
+----------------------------------------------------------------------- \
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+check laravel install globally :- laravel -v :- current installer -> Laravel Installer 4.0.4 \
+create new laravel projects:- laravel new YourProjectName \
 
-## Contributing
+---------------------------------------------------------------------------------------------- \
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+start the project:-  php artisan serve \
+aplication should open port 8000 :- http://127.0.0.1:8000/   \
 
-## Code of Conduct
+----------------------------------------------------------- \
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+create new controller :- php artisan make:controller PizzaController \
+use App\Http\Controllers\UserController; \
 
-## Security Vulnerabilities
+----------------------------------------------------------- \
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Listing All Available Commands :- php artisan list \
 
-## License
+Viewing The Help Screen For A Command :- php artisan help migrate \
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Check Laravel Version :- php artisan --version \
+
+----------------------------------------------------------- \
+database connection set on .env file  \
+
+add new migration :- php artisan make:migration create_pizzas_table  \
+
+run migration : php artisan migrate  \
+run migration : php artisan migrate:fresh (restart frsh migration on db) \
+migrate:fresh        Drop all tables and re-run all migrations \
+migrate:install      Create the migration repository \
+migrate:refresh      Reset and re-run all migrations \
+migrate:reset        Rollback all database migrations \
+migrate:rollback     Rollback the last database migration \
+migrate:status       Show the status of each migration \
+
+----------------------------------------------------------- \
+
+Create a Pizza Model :- php artisan make:model Pizza \
+
+----------------------------------------------------------- \
+
+
+Work with scss \
+need nodejs for dependency injection related to webpack and scss compiler with laravel run :- npm install \
+
+npm run dev { for development scss parser} \
+npm run watch { will check all changes and compile sacc to css } \
+
+------------------------------------------------------------------ \
+
+Add laravel auth syatem using laravel/ui plugin \
+
+install it using :- composer require laravel/ui \
+install authentication Ui :- php artisan ui vue --auth \
+Please run "npm install && npm run dev" to compile your fresh scaffolding. \
+
+to check all available route :- php artisan route:list \
+
+------------------------------------------------------------------------------ \
+
+Create New Model andd Controller using single command  \
+php artisan make:model Kabab -mc  \
+
+------------------------------------------------------------ \
+
+Advance authentication using laravel jetstream \
+create a fresh project and configure :-  \
+composer require laravel/jetstream \
+php artisan jetstreem:install livewire \
+
+--------------------------------------------------------------- \
+
+Mail using google gmail:- \
+
+MAIL_MAILER=smtp \
+MAIL_HOST=smtp.googlemail.com \
+MAIL_PORT=465 \
+MAIL_USERNAME=YourMail \
+MAIL_PASSWORD=YourPassword \
+MAIL_ENCRYPTION=ssl \
+MAIL_FROM_ADDRESS=ambuj@gmail.com \
+MAIL_FROM_NAME="${APP_NAME}" \
+
+MAIL_DRIVER=mail \
+MAIL_HOST=mail.gmail.com \
+MAIL_PORT=587 \
+MAIL_ENCRYPTION=tls \
+
+Mail using mailtrap go to mailtrap.io and create account fetch user_name secret and password secret \
+MAIL_MAILER=smtp \
+MAIL_HOST=smtp.mailtrap.io \
+MAIL_PORT=2525 \
+MAIL_USERNAME=YourMailSecret \
+MAIL_PASSWORD=YourPasswordSecret \
+MAIL_ENCRYPTION=null \
+MAIL_FROM_ADDRESS=ambuj@gmail.com \
+MAIL_FROM_NAME="${APP_NAME}" \
+
+----------------------------------------------------------------------------------------------------- \
